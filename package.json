@@ -1,0 +1,65 @@
+{
+  "name": "ts-swc-rollup-plugin",
+  "version": "0.0.0",
+  "description": "A rollup plugin for swc using ts-swc-transform",
+  "keywords": [
+    "swc",
+    "rollup",
+    "plugin",
+    "ts-swc-transform"
+  ],
+  "homepage": "https://github.com/kmalakoff/ts-swc-rollup-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kmalakoff/ts-swc-rollup-plugin.git"
+  },
+  "license": "MIT",
+  "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsds build",
+    "depcheck": "depcheck",
+    "deploy": "tsds deploy",
+    "format": "biome check --write --unsafe src/ test/",
+    "test": "tsds test:node --no-timeouts",
+    "test:engines": "nvu engines npm test",
+    "version": "tsds version"
+  },
+  "dependencies": {
+    "get-tsconfig-compat": "^0.1.0",
+    "ts-swc-transform": "^1.0.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.1",
+    "depcheck": "^1.4.7",
+    "get-tsconfig": "^4.8.1",
+    "rollup": "^4.28.1",
+    "ts-dev-stack": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "tsds": {
+    "source": "src/index.ts",
+    "targets": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
