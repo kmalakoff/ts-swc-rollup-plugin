@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import url from 'url';
 import getTS from 'get-tsconfig-compat';
+import type { SourceDescription } from 'rollup';
 
 // @ts-ignore
 import { swc } from 'ts-swc-rollup-plugin';
@@ -16,7 +17,7 @@ describe('swc', () => {
   it('no overrides', () => {
     const plugin = swc({ cwd });
     assert.equal(typeof plugin.transform, 'function');
-    const result = plugin.transform(sourceContent, sourcePath);
+    const result = plugin.transform(sourceContent, sourcePath) as SourceDescription;
     assert.equal(typeof result.code, 'string');
     assert.equal(typeof result.map, 'string');
     assert.ok(result.code.indexOf('export default function swc') >= 0);
@@ -26,7 +27,7 @@ describe('swc', () => {
   it('option tsconfig tsconfigES5.json', () => {
     const plugin = swc({ cwd, tsconfig: 'tsconfigES5.json' });
     assert.equal(typeof plugin.transform, 'function');
-    const result = plugin.transform(sourceContent, sourcePath);
+    const result = plugin.transform(sourceContent, sourcePath) as SourceDescription;
     assert.equal(typeof result.code, 'string');
     assert.equal(typeof result.map, 'string');
     assert.ok(result.code.indexOf('export default function swc') >= 0);
@@ -38,7 +39,7 @@ describe('swc', () => {
     tsconfig.config.compilerOptions = { ...tsconfig.config.compilerOptions, target: 'ES5', module: 'commonjs' };
     const plugin = swc({ cwd, tsconfig });
     assert.equal(typeof plugin.transform, 'function');
-    const result = plugin.transform(sourceContent, sourcePath);
+    const result = plugin.transform(sourceContent, sourcePath) as SourceDescription;
     assert.equal(typeof result.code, 'string');
     assert.equal(typeof result.map, 'string');
     assert.ok(result.code.indexOf('Object.defineProperty(exports, "default"') >= 0);
