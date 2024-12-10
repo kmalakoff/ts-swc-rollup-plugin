@@ -12,6 +12,8 @@ export interface SWCOptions {
 
 export default function swc(options: SWCOptions = {}) {
   const tsconfig = typeof options.tsconfig === 'object' ? options.tsconfig : getTS.getTsconfig(options.cwd || processCWD(), options.tsconfig || 'tsconfig.json');
+  if (!tsconfig) throw new Error(`tsconfig not found in: ${options.cwd || processCWD()} named: ${options.tsconfig || 'tsconfig.json'}`)
+
   const matcher = createMatcher(tsconfig);
   return {
     name: 'ts-swc',
