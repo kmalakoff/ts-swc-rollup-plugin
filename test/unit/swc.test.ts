@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import url from 'url';
 import getTS from 'get-tsconfig-compat';
+import home from 'os-homedir';
 import type { SourceDescription } from 'rollup';
 
 // @ts-ignore
@@ -44,5 +45,14 @@ describe('swc', () => {
     assert.equal(typeof result.map, 'string');
     assert.ok(result.code.indexOf('Object.defineProperty(exports, "default"') >= 0);
     assert.ok(result.code.indexOf('var tsconfig =') >= 0);
+  });
+
+  it('error', () => {
+    try {
+      swc({ cwd: home() });
+      assert.ok(false, 'this should fail');
+    } catch (err) {
+      assert.ok(err);
+    }
   });
 });

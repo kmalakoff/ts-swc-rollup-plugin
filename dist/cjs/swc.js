@@ -23,6 +23,7 @@ function _type_of(obj) {
 function swc() {
     var options = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     var tsconfig = _type_of(options.tsconfig) === 'object' ? options.tsconfig : _gettsconfigcompat.default.getTsconfig(options.cwd || (0, _processCWDcjs.default)(), options.tsconfig || 'tsconfig.json');
+    if (!tsconfig) throw new Error("tsconfig not found in: ".concat(options.cwd || (0, _processCWDcjs.default)(), " named: ").concat(options.tsconfig || 'tsconfig.json'));
     var matcher = (0, _tsswctransform.createMatcher)(tsconfig);
     return {
         name: 'ts-swc',
