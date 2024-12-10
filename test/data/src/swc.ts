@@ -3,7 +3,7 @@ import { createMatcher, transformSync } from 'ts-swc-transform';
 // @ts-ignore
 import processCWD from './processCWD.cjs';
 
-import type { TsConfigResult } from 'get-tsconfig-compat';
+import type { TsConfigResult } from 'get-tsconfig';
 import type { TransformResult } from 'rollup';
 export interface SWCOptions {
   cwd?: string;
