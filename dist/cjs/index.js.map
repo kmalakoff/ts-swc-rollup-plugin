@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.ts"],"sourcesContent":["export type { TransformResult } from 'rollup';\nexport type { SWCOptions } from './swc.js';\nexport { default as swc } from './swc.js';\n"],"names":["swc"],"mappings":";;;;+BAEoBA;;;eAAAA,YAAG;;;0DAAQ"}
