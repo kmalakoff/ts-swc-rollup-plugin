@@ -40,8 +40,7 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "get-tsconfig": "*",
-    "get-tsconfig-compat": "^0.1.0",
+    "get-tsconfig-compat": "^1.0.1",
     "rollup": "*",
     "ts-swc-transform": "^1.0.3"
   },
@@ -50,7 +49,7 @@
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.1",
     "depcheck": "^1.4.7",
-    "os-homedir": "^1.0.2",
+    "os-homedir": "^2.0.0",
     "ts-dev-stack": "^1.2.0"
   },
   "engines": {

@@ -3,7 +3,7 @@ import { createMatcher, transformSync } from 'ts-swc-transform';
 // @ts-ignore
 import processCWD from './processCWD.cjs';
 
-import type { TsConfigResult } from 'get-tsconfig';
+import type { TsConfigResult } from 'get-tsconfig-compat';
 import type { TransformResult } from 'rollup';
 export interface SWCOptions {
   cwd?: string;
@@ -12,7 +12,7 @@ export interface SWCOptions {
 
 export default function swc(options: SWCOptions = {}) {
   const tsconfig = typeof options.tsconfig === 'object' ? options.tsconfig : getTS.getTsconfig(options.cwd || processCWD(), options.tsconfig || 'tsconfig.json');
-  if (!tsconfig) throw new Error(`tsconfig not found in: ${options.cwd || processCWD()} named: ${options.tsconfig || 'tsconfig.json'}`)
+  if (!tsconfig) throw new Error(`tsconfig not found in: ${options.cwd || processCWD()} named: ${options.tsconfig || 'tsconfig.json'}`);
 
   const matcher = createMatcher(tsconfig);
   return {
