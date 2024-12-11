@@ -5,7 +5,7 @@ A rollup plugin for swc using ts-swc-transform.
 Pass tsconfig name
 ```
 // rollup.config.js
-import { swc } from 'ts-swc-rollup-plugin';
+import swc from 'ts-swc-rollup-plugin';
 
 export default {
   input: 'ABC',
@@ -23,7 +23,7 @@ export default {
 Pass tsconfig object
 ```
 // rollup.config.js
-import { swc } from 'ts-swc-rollup-plugin';
+import swc from 'ts-swc-rollup-plugin';
 import { getTsconfig } from 'get-tsconfig';
 
 export default {
