@@ -7,11 +7,11 @@ import home from 'os-homedir';
 import type { SourceDescription } from 'rollup';
 
 // @ts-ignore
-import { swc } from 'ts-swc-rollup-plugin';
+import swc from 'ts-swc-rollup-plugin';
 
 const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(url.fileURLToPath(import.meta.url));
 const cwd = path.resolve(dirname, '..', 'data');
-const sourcePath = path.join(cwd, 'src', 'swc.ts');
+const sourcePath = path.join(cwd, 'src', 'index.ts');
 const sourceContent = fs.readFileSync(sourcePath, 'utf8');
 
 describe('swc', () => {
