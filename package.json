@@ -43,15 +43,15 @@
     "get-tsconfig": "*",
     "get-tsconfig-compat": "^1.1.0",
     "rollup": "*",
-    "ts-swc-transform": "^1.0.3"
+    "ts-swc-transform": "^1.1.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.2",
     "depcheck": "^1.4.7",
     "os-homedir": "^2.0.0",
-    "ts-dev-stack": "^1.2.0"
+    "ts-dev-stack": "^1.2.1"
   },
   "engines": {
     "node": ">=0.8"
