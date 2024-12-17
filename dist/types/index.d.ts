@@ -1,6 +1,6 @@
-import type { TsConfigResult } from 'get-tsconfig';
+import type { TsConfigResult } from 'get-tsconfig-compat';
 import type { TransformResult } from 'rollup';
-export type { TsConfigResult } from 'get-tsconfig';
+export type { TsConfigResult } from 'get-tsconfig-compat';
 export type { TransformResult } from 'rollup';
 export interface SWCOptions {
     cwd?: string;
