@@ -9,9 +9,9 @@ Object.defineProperty(exports, "default", {
     }
 });
 var _gettsconfigcompat = /*#__PURE__*/ _interop_require_default(require("get-tsconfig-compat"));
+var _process = /*#__PURE__*/ _interop_require_default(require("process"));
 var _tsswctransform = require("ts-swc-transform");
 var _constants = require("./constants.js");
-var _processcjs = /*#__PURE__*/ _interop_require_default(require("./process.js"));
 function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -23,8 +23,8 @@ function _type_of(obj) {
 }
 function swc() {
     var options = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    var tsconfig = _type_of(options.tsconfig) === 'object' ? options.tsconfig : _gettsconfigcompat.default.getTsconfig(options.cwd || _processcjs.default.cwd(), options.tsconfig || 'tsconfig.json');
-    if (!tsconfig) throw new Error("tsconfig not found in: ".concat(options.cwd || _processcjs.default.cwd(), " named: ").concat(options.tsconfig || 'tsconfig.json'));
+    var tsconfig = _type_of(options.tsconfig) === 'object' ? options.tsconfig : _gettsconfigcompat.default.getTsconfig(options.cwd || _process.default.cwd(), options.tsconfig || 'tsconfig.json');
+    if (!tsconfig) throw new Error("tsconfig not found in: ".concat(options.cwd || _process.default.cwd(), " named: ").concat(options.tsconfig || 'tsconfig.json'));
     var matcher = (0, _tsswctransform.createMatcher)(tsconfig);
     return {
         name: 'ts-swc',
