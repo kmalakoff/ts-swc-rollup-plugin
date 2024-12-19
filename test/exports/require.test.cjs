@@ -1,7 +1,7 @@
 const assert = require('assert');
 const plugin = require('ts-swc-rollup-plugin');
 
-describe('exports .ts', () => {
+describe('exports .cjs', () => {
   it('swc', () => {
     assert.equal(typeof plugin, 'function');
     const swc = plugin();
