@@ -42,7 +42,7 @@
   "dependencies": {
     "get-tsconfig-compat": "^1.1.1",
     "rollup": "*",
-    "ts-swc-transform": "^1.3.3"
+    "ts-swc-transform": "^1.3.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -51,7 +51,7 @@
     "@types/node": "^22.10.2",
     "depcheck": "^1.4.7",
     "os-homedir": "^2.0.0",
-    "ts-dev-stack": "^1.2.4"
+    "ts-dev-stack": "^1.2.5"
   },
   "engines": {
     "node": ">=16"
