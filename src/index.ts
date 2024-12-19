@@ -1,10 +1,10 @@
 import getTS from 'get-tsconfig-compat';
-import process from 'process';
-import { createMatcher, resolveFileSync, transformSync } from 'ts-swc-transform';
-import { typeFileRegEx } from './constants.js';
-
 import type { TsConfigResult } from 'get-tsconfig-compat';
 import type { Plugin } from 'rollup';
+import { createMatcher, resolveFileSync, transformSync } from 'ts-swc-transform';
+import { typeFileRegEx } from './constants.js';
+// @ts-ignore
+import process from './lib/process.cjs';
 
 export type { TsConfigResult } from 'get-tsconfig-compat';
 export interface SWCOptions {
