@@ -1,9 +1,7 @@
 import getTS from 'get-tsconfig-compat';
+import process from 'process';
 import { createMatcher, resolveFileSync, transformSync } from 'ts-swc-transform';
 import { typeFileRegEx } from './constants.js';
-
-// @ts-ignore
-import process from './process.cjs';
 
 import type { TsConfigResult } from 'get-tsconfig-compat';
 import type { Plugin } from 'rollup';
