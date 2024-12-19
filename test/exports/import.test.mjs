@@ -1,8 +1,11 @@
 import assert from 'assert';
-import swc from 'ts-swc-rollup-plugin';
+import plugin from 'ts-swc-rollup-plugin';
 
 describe('exports .mjs', () => {
   it('swc', () => {
-    assert.equal(typeof swc, 'function');
+    assert.equal(typeof plugin, 'function');
+    const swc = plugin();
+    assert.equal(typeof swc.transform, 'function');
+    assert.equal(typeof swc.resolveId, 'function');
   });
 });
