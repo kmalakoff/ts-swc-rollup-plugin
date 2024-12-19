@@ -1,1 +1,0 @@
-{"version":3,"sources":["processCWD.cjs"],"sourcesContent":["module.exports = process.cwd;\n"],"names":["module","exports","process","cwd"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQC,GAAG"}

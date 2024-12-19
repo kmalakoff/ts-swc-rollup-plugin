@@ -10,7 +10,8 @@ Object.defineProperty(exports, "default", {
 });
 var _gettsconfigcompat = /*#__PURE__*/ _interop_require_default(require("get-tsconfig-compat"));
 var _tsswctransform = require("ts-swc-transform");
-var _processCWDcjs = /*#__PURE__*/ _interop_require_default(require("./processCWD.js"));
+var _constants = require("./constants.js");
+var _processcjs = /*#__PURE__*/ _interop_require_default(require("./process.js"));
 function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -22,14 +23,23 @@ function _type_of(obj) {
 }
 function swc() {
     var options = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    var tsconfig = _type_of(options.tsconfig) === 'object' ? options.tsconfig : _gettsconfigcompat.default.getTsconfig(options.cwd || (0, _processCWDcjs.default)(), options.tsconfig || 'tsconfig.json');
-    if (!tsconfig) throw new Error("tsconfig not found in: ".concat(options.cwd || (0, _processCWDcjs.default)(), " named: ").concat(options.tsconfig || 'tsconfig.json'));
+    var tsconfig = _type_of(options.tsconfig) === 'object' ? options.tsconfig : _gettsconfigcompat.default.getTsconfig(options.cwd || _processcjs.default.cwd(), options.tsconfig || 'tsconfig.json');
+    if (!tsconfig) throw new Error("tsconfig not found in: ".concat(options.cwd || _processcjs.default.cwd(), " named: ").concat(options.tsconfig || 'tsconfig.json'));
     var matcher = (0, _tsswctransform.createMatcher)(tsconfig);
     return {
         name: 'ts-swc',
         transform: function transform(code, id) {
-            if (!matcher(id)) return null;
             return (0, _tsswctransform.transformSync)(code, id, tsconfig);
+        },
+        resolveId: function resolveId(specifier, parentPath) {
+            var context = {
+                parentPath: parentPath
+            };
+            var filePath = (0, _tsswctransform.resolveFileSync)(specifier, context);
+            if (!filePath) return null;
+            if (!matcher(filePath)) return null;
+            if (_constants.typeFileRegEx.test(filePath)) return null;
+            return filePath;
         }
     };
 }

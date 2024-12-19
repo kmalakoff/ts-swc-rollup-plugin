@@ -1,12 +1,8 @@
 import type { TsConfigResult } from 'get-tsconfig-compat';
-import type { TransformResult } from 'rollup';
+import type { Plugin } from 'rollup';
 export type { TsConfigResult } from 'get-tsconfig-compat';
-export type { TransformResult } from 'rollup';
 export interface SWCOptions {
     cwd?: string;
     tsconfig?: TsConfigResult | string;
 }
-export default function swc(options?: SWCOptions): {
-    name: string;
-    transform(code: string, id: string): TransformResult;
-};
+export default function swc(options?: SWCOptions): Plugin<SWCOptions>;
