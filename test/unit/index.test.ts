@@ -9,8 +9,8 @@ import { rollup } from 'rollup';
 // @ts-ignore
 import swc from 'ts-swc-rollup-plugin';
 
-const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(url.fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(dirname, '..', 'data');
+const __dirname = path.dirname(typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url));
+const DATA_DIR = path.resolve(__dirname, '..', 'data');
 const input = path.join(DATA_DIR, 'src', 'index.ts');
 
 describe('plugin', () => {
