@@ -7,7 +7,7 @@ import path from 'path';
 import url from 'url';
 import commonjs from '@rollup/plugin-commonjs';
 import getTS from 'get-tsconfig-compat';
-import home from 'os-homedir';
+import home from 'homedir-polyfill';
 import { rollup } from 'rollup';
 
 // @ts-ignore
