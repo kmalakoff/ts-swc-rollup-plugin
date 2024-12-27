@@ -1,1 +1,1 @@
-ignores: ["ts-swc-rollup-plugin", "depcheck", "ts-dev-stack", "@types/*", "@biomejs/*"]
+ignores: ["ts-swc-rollup-plugin", "depcheck", "@types/*", "@biomejs/*"]
