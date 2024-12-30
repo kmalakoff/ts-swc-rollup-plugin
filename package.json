@@ -40,9 +40,9 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "get-tsconfig-compat": "^2.0.2",
+    "get-tsconfig-compat": "^2.0.3",
     "rollup": "*",
-    "ts-swc-transform": "^1.9.3"
+    "ts-swc-transform": "^1.9.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
