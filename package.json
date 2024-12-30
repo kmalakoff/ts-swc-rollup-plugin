@@ -42,7 +42,7 @@
   "dependencies": {
     "get-tsconfig-compat": "^2.0.3",
     "rollup": "*",
-    "ts-swc-transform": "^1.9.6"
+    "ts-swc-transform": "^1.9.7"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
