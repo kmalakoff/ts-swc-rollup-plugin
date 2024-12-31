@@ -1,8 +1,5 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "files": {
-    "ignore": ["assets/**", "dist/**", "node_modules/**", "test/data/**"]
-  },
   "formatter": {
     "enabled": true,
     "lineWidth": 320,
@@ -19,8 +16,7 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "noForEach": "off",
-        "useOptionalChain": "off"
+        "noForEach": "off"
       },
       "correctness": {
         "noUnusedVariables": "warn",
