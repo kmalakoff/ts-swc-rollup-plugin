@@ -1,7 +1,7 @@
 import * as getTS from 'get-tsconfig-compat';
 import type { Plugin } from 'rollup';
 import { createMatcher, resolveFileSync, transformSync } from 'ts-swc-transform';
-import { typeFileRegEx } from './constants.js';
+import { typeFileRegEx } from './constants';
 
 export type { TsConfigResult } from 'get-tsconfig-compat';
 export interface SWCOptions {

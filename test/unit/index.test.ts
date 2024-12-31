@@ -24,10 +24,10 @@ describe('plugin', () => {
     assert.ok(res.output[0].code.indexOf('export { swc as default }') >= 0, 'esm exports');
   });
 
-  it('option tsconfig tsconfigES5.json', async () => {
+  it('option tsconfig tsconfig.es5.json', async () => {
     const bundle = await rollup({
       input,
-      plugins: [commonjs({ extensions: ['.cts'] }), swc({ cwd: DATA_DIR, tsconfig: 'tsconfigES5.json' })],
+      plugins: [commonjs({ extensions: ['.cts'] }), swc({ cwd: DATA_DIR, tsconfig: 'tsconfig.es5.json' })],
     });
     const res = await bundle.generate({ exports: 'auto' });
     assert.ok(res.output[0].code.indexOf('function swc()') >= 0, 'swc function');
