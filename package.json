@@ -32,7 +32,6 @@
   ],
   "scripts": {
     "build": "tsds build",
-    "depcheck": "depcheck",
     "deploy": "tsds deploy",
     "format": "biome check --write --unsafe src/ test/",
     "test": "tsds test:node --no-timeouts",
@@ -42,7 +41,7 @@
   "dependencies": {
     "get-tsconfig-compat": "^2.0.3",
     "rollup": "*",
-    "ts-swc-transform": "^1.9.9"
+    "ts-swc-transform": "^1.10.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
