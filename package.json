@@ -40,13 +40,13 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.11.6"
+    "ts-swc-transform": "^1.11.7"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.3",
+    "@types/node": "^22.10.4",
     "get-tsconfig-compat": "^2.0.3",
     "homedir-polyfill": "^1.0.3"
   },
