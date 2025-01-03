@@ -25,7 +25,7 @@ jobs:
       # - run: npm ci - not working due to binary incompatibilities - install without lockfile - https://github.com/npm/cli/issues/4828#issuecomment-2514987829
       - run: git checkout master -- package-lock.json
       - run: npm install
-      # - run: npm run version
+      - run: npm run docs
       - run: npm run build
       - run: npm run test
       # - run: npm run test:engines
