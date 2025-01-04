@@ -10,7 +10,7 @@ import { rollup } from 'rollup';
 import swc from 'ts-swc-rollup-plugin';
 
 const __dirname = path.dirname(typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(__dirname, '..', 'data');
+const DATA_DIR = path.join(__dirname, '..', 'data');
 const input = path.join(DATA_DIR, 'src', 'index.ts');
 
 describe('plugin', () => {
