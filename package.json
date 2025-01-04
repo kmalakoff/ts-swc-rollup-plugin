@@ -11,7 +11,7 @@
   "homepage": "https://github.com/kmalakoff/ts-swc-rollup-plugin",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kmalakoff/ts-swc-rollup-plugin.git"
+    "url": "git+ssh://git@github.com/kmalakoff/ts-swc-rollup-plugin.git"
   },
   "license": "MIT",
   "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.12.5"
+    "ts-swc-transform": "^1.12.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
