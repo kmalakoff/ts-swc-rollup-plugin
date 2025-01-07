@@ -38,8 +38,12 @@
     "version": "tsds version"
   },
   "dependencies": {
+    "install-module-linked": "^1.1.8",
+    "node-version-call": "^1.6.6",
+    "resolve": "^1.22.10",
+    "resolve-once-cb": "^0.1.7",
     "rollup": "*",
-    "ts-swc-transform": "^1.13.6"
+    "ts-swc-transform": "^1.13.10"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -47,7 +51,8 @@
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.5",
     "get-tsconfig-compat": "^2.0.3",
-    "homedir-polyfill": "^1.0.3"
+    "homedir-polyfill": "^1.0.3",
+    "rimraf2": "^2.8.2"
   },
   "engines": {
     "node": ">=16"
