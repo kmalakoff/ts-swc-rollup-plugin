@@ -5,10 +5,9 @@ import url from 'url';
 import commonjs from '@rollup/plugin-commonjs';
 import * as getTS from 'get-tsconfig-compat';
 import home from 'homedir-polyfill';
-import removeBindings from '../lib/removeBindings.cjs';
 
 // @ts-ignore
-import swc, { ensureBindingsSync } from 'ts-swc-rollup-plugin';
+import swc from 'ts-swc-rollup-plugin';
 const _require = typeof require === 'undefined' ? Module.createRequire(import.meta.url) : require;
 
 const __dirname = path.dirname(typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url));
@@ -17,8 +16,6 @@ const input = path.join(DATA_DIR, 'src', 'index.ts');
 
 describe('plugin', () => {
   it('no overrides', async () => {
-    removeBindings('rollup', '@rollup/rollup-');
-    ensureBindingsSync();
     const rollup = _require('rollup').rollup;
     const bundle = await rollup({
       input,

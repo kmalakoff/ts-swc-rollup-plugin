@@ -38,10 +38,6 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "function-exec-sync": "^1.2.5",
-    "install-module-linked": "^1.1.8",
-    "resolve": "^1.22.10",
-    "resolve-once-cb": "^0.1.7",
     "rollup": "*",
     "ts-swc-transform": "^1.13.11"
   },
@@ -51,8 +47,7 @@
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.5",
     "get-tsconfig-compat": "^2.0.3",
-    "homedir-polyfill": "^1.0.3",
-    "rimraf2": "^2.8.2"
+    "homedir-polyfill": "^1.0.3"
   },
   "engines": {
     "node": ">=16"
