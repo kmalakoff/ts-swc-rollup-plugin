@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.13.11"
+    "ts-swc-transform": "^1.14.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
