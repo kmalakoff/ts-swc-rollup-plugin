@@ -36,13 +36,13 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.15.5"
+    "ts-swc-transform": "^1.15.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.10.6",
     "get-tsconfig-compat": "^2.0.3",
     "homedir-polyfill": "^1.0.3"
   },
