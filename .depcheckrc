@@ -1,1 +1,1 @@
-ignores: ["@types/*", "ts-swc-rollup-plugin", "@biomejs/*"]
+ignores: ["ts-swc-rollup-plugin"]

@@ -39,12 +39,11 @@
     "ts-swc-transform": "^1.15.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@rollup/plugin-commonjs": "^28.0.2",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.6",
-    "get-tsconfig-compat": "^2.0.3",
-    "homedir-polyfill": "^1.0.3"
+    "@rollup/plugin-commonjs": "*",
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "get-tsconfig-compat": "*",
+    "homedir-polyfill": "*"
   },
   "engines": {
     "node": ">=16"
