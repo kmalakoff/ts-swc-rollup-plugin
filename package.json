@@ -35,8 +35,9 @@
     "version": "tsds version"
   },
   "dependencies": {
+    "install-optional": "^0.1.28",
     "rollup": "*",
-    "ts-swc-transform": "^1.15.26"
+    "ts-swc-transform": "^1.15.27"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
