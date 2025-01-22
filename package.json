@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.15.29"
+    "ts-swc-transform": "^1.15.30"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
@@ -44,7 +44,7 @@
     "@types/node": "*",
     "get-tsconfig-compat": "*",
     "homedir-polyfill": "*",
-    "install-optional": "^0.1.30"
+    "install-optional": "^0.1.31"
   },
   "engines": {
     "node": ">=16"
