@@ -44,7 +44,7 @@
     "@types/node": "*",
     "get-tsconfig-compat": "*",
     "homedir-polyfill": "*",
-    "install-optional": "^0.1.28"
+    "install-optional": "^0.1.30"
   },
   "engines": {
     "node": ">=16"
