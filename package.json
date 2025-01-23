@@ -1,6 +1,6 @@
 {
   "name": "ts-swc-rollup-plugin",
-  "version": "1.10.33",
+  "version": "1.10.34",
   "description": "A rollup plugin for swc using ts-swc-transform",
   "keywords": [
     "swc",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.15.33"
+    "ts-swc-transform": "^1.15.34"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
@@ -44,7 +44,7 @@
     "@types/node": "*",
     "get-tsconfig-compat": "*",
     "homedir-polyfill": "*",
-    "install-optional": "^0.1.34"
+    "install-optional": "^0.1.35"
   },
   "engines": {
     "node": ">=16"
