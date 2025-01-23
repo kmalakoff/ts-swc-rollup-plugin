@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^1.15.45"
+    "ts-swc-transform": "^1.15.46"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
