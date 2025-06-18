@@ -1,14 +1,14 @@
-import assert from 'assert';
-import Module from 'module';
-import path from 'path';
-import url from 'url';
 import commonjs from '@rollup/plugin-commonjs';
+import assert from 'assert';
 import * as getTS from 'get-tsconfig-compat';
 import home from 'homedir-polyfill';
 import { installSync } from 'install-optional';
-
+import Module from 'module';
+import path from 'path';
 // @ts-ignore
 import swc from 'ts-swc-rollup-plugin';
+import url from 'url';
+
 const _require = typeof require === 'undefined' ? Module.createRequire(import.meta.url) : require;
 
 const __dirname = path.dirname(typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url));
