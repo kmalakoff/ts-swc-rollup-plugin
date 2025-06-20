@@ -31,13 +31,13 @@
   "scripts": {
     "build": "tsds build",
     "format": "biome check --write --unsafe",
-    "test": "tsds test:node --no-timeouts",
-    "test:engines": "nvu engines npm test",
+    "test": "mocha --no-timeouts test/**/*.test.*",
+    "test:engines": "nvu engines tsds test:node --no-timeouts",
     "version": "tsds version"
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^2.0.16"
+    "ts-swc-transform": "^2.0.17"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
