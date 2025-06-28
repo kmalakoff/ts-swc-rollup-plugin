@@ -1,12 +1,12 @@
 import commonjs from '@rollup/plugin-commonjs';
 import assert from 'assert';
-import * as getTS from 'get-tsconfig-compat';
 import home from 'homedir-polyfill';
 import { installSync } from 'install-optional';
 import Module from 'module';
 import path from 'path';
 // @ts-ignore
 import swc from 'ts-swc-rollup-plugin';
+import { loadConfigSync } from 'ts-swc-transform';
 import url from 'url';
 
 const _require = typeof require === 'undefined' ? Module.createRequire(import.meta.url) : require;
@@ -42,8 +42,8 @@ describe('plugin', () => {
   });
 
   it('option tsconfig loaded', async () => {
-    const tsconfig = getTS.getTsconfig(DATA_DIR);
-    tsconfig.config.compilerOptions = { ...tsconfig.config.compilerOptions, target: 'ES5', module: 'commonjs' };
+    const tsconfig = loadConfigSync(DATA_DIR);
+    tsconfig.config.compilerOptions = { ...tsconfig.config.compilerOptions, target: 'es5', module: 'commonjs' };
 
     const rollup = _require('rollup').rollup;
     const bundle = await rollup({

@@ -37,13 +37,12 @@
   },
   "dependencies": {
     "rollup": "*",
-    "ts-swc-transform": "^2.2.7"
+    "ts-swc-transform": "^2.3.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
     "@types/mocha": "*",
     "@types/node": "*",
-    "get-tsconfig-compat": "*",
     "homedir-polyfill": "*",
     "install-optional": "*"
   },
