@@ -38,7 +38,7 @@
   "dependencies": {
     "read-tsconfig-sync": "^0.1.1",
     "rollup": "*",
-    "ts-swc-transform": "^2.4.0"
+    "ts-swc-transform": "^2.4.3"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
