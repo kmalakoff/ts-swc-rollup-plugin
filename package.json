@@ -36,7 +36,7 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "read-tsconfig-sync": "^0.4.0",
+    "read-tsconfig-sync": "^1.0.1",
     "rollup": "*",
     "ts-swc-transform": "^2.4.5"
   },
