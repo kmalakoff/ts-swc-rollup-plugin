@@ -4,9 +4,9 @@ import home from 'homedir-polyfill';
 import { installSync } from 'install-optional';
 import Module from 'module';
 import path from 'path';
+import loadConfigSync from 'read-tsconfig-sync';
 // @ts-ignore
 import swc from 'ts-swc-rollup-plugin';
-import { loadConfigSync } from 'ts-swc-transform';
 import url from 'url';
 
 const _require = typeof require === 'undefined' ? Module.createRequire(import.meta.url) : require;
