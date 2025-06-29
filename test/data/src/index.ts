@@ -1,5 +1,6 @@
 import type { Plugin } from 'rollup';
-import { createMatcher, resolveFileSync, transformSync, loadConfigSync, type TSConfig } from 'ts-swc-transform';
+import loadConfigSync, { type TSConfig } from 'read-tsconfig-sync';
+import { createMatcher, resolveFileSync, transformSync } from 'ts-swc-transform';
 import { typeFileRegEx } from './constants.ts';
 
 export interface SWCOptions {
