@@ -36,10 +36,10 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "read-tsconfig-sync": "^1.0.2",
+    "read-tsconfig-sync": "*",
     "rollup": "*",
-    "test-match": "^1.0.1",
-    "ts-swc-transform": "^2.6.7"
+    "test-match": "*",
+    "ts-swc-transform": "*"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",
