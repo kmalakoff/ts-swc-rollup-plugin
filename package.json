@@ -1,6 +1,6 @@
 {
   "name": "ts-swc-rollup-plugin",
-  "version": "2.3.14",
+  "version": "2.3.15",
   "description": "A rollup plugin for swc using ts-swc-transform",
   "keywords": [
     "swc",
