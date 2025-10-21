@@ -1,6 +1,5 @@
 import assert from 'assert';
 
-// @ts-ignore
 import plugin from 'ts-swc-rollup-plugin';
 
 describe('exports .ts', () => {
