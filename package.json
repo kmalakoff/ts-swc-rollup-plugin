@@ -32,7 +32,7 @@
     "build": "tsds build",
     "format": "biome check --write --unsafe",
     "prepublishOnly": "tsds validate",
-    "test": "mocha --no-timeouts test/**/*.test.*",
+    "test": "tsds test:node --no-timeouts",
     "test:engines": "nvu engines tsds test:node --no-timeouts",
     "version": "tsds version"
   },
@@ -43,11 +43,14 @@
     "ts-swc-transform": "*"
   },
   "devDependencies": {
+    "@biomejs/biome": "*",
     "@rollup/plugin-commonjs": "*",
     "@types/mocha": "*",
     "@types/node": "*",
     "homedir-polyfill": "*",
-    "install-optional": "*"
+    "install-optional": "*",
+    "node-version-use": "*",
+    "ts-dev-stack": "*"
   },
   "engines": {
     "node": ">=16"
