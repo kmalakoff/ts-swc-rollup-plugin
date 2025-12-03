@@ -1,1 +1,1 @@
-export const typeFileRegEx = /^[^.]+\.d\.[cm]?ts$/;
+export const typeFileRegEx = /\.d\.[cm]?ts$/;
