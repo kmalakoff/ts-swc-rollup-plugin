@@ -1,12 +1,12 @@
 import commonjs from '@rollup/plugin-commonjs';
 import assert from 'assert';
-import home from 'homedir-polyfill';
 import { installSync } from 'install-optional';
 import Module from 'module';
 import path from 'path';
 import loadConfigSync from 'read-tsconfig-sync';
 import swc from 'ts-swc-rollup-plugin';
 import url from 'url';
+import { homedir as home } from '../lib/compat.ts';
 
 const _require = typeof require === 'undefined' ? Module.createRequire(import.meta.url) : require;
 
