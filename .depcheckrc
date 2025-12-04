@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "@biomejs/biome", "ts-swc-rollup-plugin"]
+ignores: ["node-version-use", "ts-dev-stack", "ts-swc-rollup-plugin"]
