@@ -38,20 +38,20 @@
     "version": "tsds version"
   },
   "dependencies": {
-    "read-tsconfig-sync": "*",
-    "rollup": "*",
-    "test-match": "*",
-    "ts-swc-transform": "*"
+    "read-tsconfig-sync": "^1.1.9",
+    "rollup": "^4.53.3",
+    "test-match": "^1.1.4",
+    "ts-swc-transform": "^2.7.10"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "*",
-    "@types/mocha": "*",
-    "@types/node": "*",
-    "homedir-polyfill": "*",
-    "install-optional": "*",
-    "node-version-use": "*",
-    "ts-dev-stack": "*",
-    "tsds-config": "*"
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.0.1",
+    "homedir-polyfill": "^1.0.3",
+    "install-optional": "^1.0.20",
+    "node-version-use": "^2.1.6",
+    "ts-dev-stack": "^1.21.3",
+    "tsds-config": "^0.2.1"
   },
   "engines": {
     "node": ">=16"
