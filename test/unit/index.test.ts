@@ -46,6 +46,7 @@ describe('plugin', () => {
 
   it('option tsconfig loaded', async () => {
     const tsconfig = loadConfigSync(DATA_DIR);
+    if (!tsconfig) throw new Error('Failed to load tsconfig');
     tsconfig.config.compilerOptions = { ...tsconfig.config.compilerOptions, target: 'es5', module: 'commonjs' };
 
     const rollup = _require('rollup').rollup;
@@ -131,6 +132,7 @@ describe('plugin', () => {
   describe('matcher (include/exclude)', () => {
     it('excludes files in node_modules', () => {
       const tsconfig = loadConfigSync(DATA_DIR);
+      if (!tsconfig) throw new Error('Failed to load tsconfig');
       tsconfig.config.exclude = ['node_modules'];
       const plugin = swc({ cwd: DATA_DIR, tsconfig });
       const resolveId = plugin.resolveId as ResolveIdFn;
@@ -141,6 +143,7 @@ describe('plugin', () => {
 
     it('excludes files in dist directory', () => {
       const tsconfig = loadConfigSync(DATA_DIR);
+      if (!tsconfig) throw new Error('Failed to load tsconfig');
       tsconfig.config.exclude = ['dist'];
       const plugin = swc({ cwd: DATA_DIR, tsconfig });
       const resolveId = plugin.resolveId as ResolveIdFn;
@@ -171,6 +174,7 @@ describe('plugin', () => {
   describe('tsconfig edge cases', () => {
     it('tsconfig with no include array uses default', () => {
       const tsconfig = loadConfigSync(DATA_DIR);
+      if (!tsconfig) throw new Error('Failed to load tsconfig');
       delete tsconfig.config.include;
       const plugin = swc({ cwd: DATA_DIR, tsconfig });
       assert.ok(plugin, 'plugin should be created');
@@ -179,6 +183,7 @@ describe('plugin', () => {
 
     it('tsconfig with no exclude array uses default', () => {
       const tsconfig = loadConfigSync(DATA_DIR);
+      if (!tsconfig) throw new Error('Failed to load tsconfig');
       delete tsconfig.config.exclude;
       const plugin = swc({ cwd: DATA_DIR, tsconfig });
       assert.ok(plugin, 'plugin should be created');
@@ -187,6 +192,7 @@ describe('plugin', () => {
 
     it('tsconfig with empty include array', () => {
       const tsconfig = loadConfigSync(DATA_DIR);
+      if (!tsconfig) throw new Error('Failed to load tsconfig');
       tsconfig.config.include = [];
       const plugin = swc({ cwd: DATA_DIR, tsconfig });
       assert.ok(plugin, 'plugin should be created');
@@ -209,8 +215,9 @@ describe('plugin', () => {
 
     it('uses process.cwd() when cwd not specified', () => {
       const originalCwd = process.cwd();
+      const tsconfig = loadConfigSync(DATA_DIR);
+      if (!tsconfig) throw new Error('Failed to load tsconfig');
       try {
-        const tsconfig = loadConfigSync(DATA_DIR);
         tsconfig.config.include = ['**/*.ts'];
         const plugin = swc({ tsconfig });
         assert.ok(plugin, 'plugin should be created without cwd option');
