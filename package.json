@@ -11,7 +11,7 @@
   "homepage": "https://github.com/kmalakoff/ts-swc-rollup-plugin",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kmalakoff/ts-swc-rollup-plugin.git"
+    "url": "git+https://github.com/kmalakoff/ts-swc-rollup-plugin.git"
   },
   "license": "MIT",
   "author": "Kevin Malakoff <kmalakoff@gmail.com> (https://github.com/kmalakoff)",
