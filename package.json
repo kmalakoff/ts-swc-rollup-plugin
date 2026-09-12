@@ -55,5 +55,9 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "allowScripts": {
+    "core-js-pure": true,
+    "@swc/core": true
   }
 }
