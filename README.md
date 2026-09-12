@@ -1,44 +1,28 @@
-## ts-swc-rollup-plugin
+# ts-swc-rollup-plugin
 
-A rollup plugin for swc using ts-swc-transform.
+A Rollup plugin that transforms TypeScript with SWC. It reads `tsconfig.json` by default and requires Node.js 16 or newer.
 
-Pass tsconfig name
+## Install
+
+```bash
+npm install --save-dev rollup ts-swc-rollup-plugin
 ```
+
+## Use
+
+```js
 // rollup.config.js
 import swc from 'ts-swc-rollup-plugin';
 
 export default {
-  input: 'ABC',
-  output: {},
-  plugins: [
-    swc({
-      // All options are optional
-      cwd: process.cwd(), // default
-      tsconfig: 'tsconfig.json', // default
-    }),
-  ];
-}
+  input: 'src/index.ts',
+  output: { dir: 'dist', format: 'esm' },
+  plugins: [swc()],
+};
 ```
 
-Pass tsconfig object
-```
-// rollup.config.js
-import swc from 'ts-swc-rollup-plugin';
-import { getTsconfig } from 'get-tsconfig';
+Pass `cwd` to find a config in another directory, or pass the parsed config object as `tsconfig`. The plugin skips declaration files and files outside the configured TypeScript include/exclude patterns.
 
-export default {
-  input: 'ABC',
-  output: {},
-  plugins: [
-    swc({
-      // All options are optional
-      cwd: process.cwd(), // default
-      tsconfig: getTsconfig(), // custom
-    }),
-  ];
-}
-```
+## Documentation
 
-### Documentation
-
-[API Docs](https://kmalakoff.github.io/ts-swc-rollup-plugin/)
+[API docs](https://kmalakoff.github.io/ts-swc-rollup-plugin/)

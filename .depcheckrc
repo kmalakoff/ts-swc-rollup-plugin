@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "ts-swc-rollup-plugin"]
+ignores: ["ts-swc-rollup-plugin", "node-version-use", "ts-dev-stack"]
