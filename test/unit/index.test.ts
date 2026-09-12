@@ -5,6 +5,7 @@ import url from 'url';
 import commonjs from '@rollup/plugin-commonjs';
 import * as getTS from 'get-tsconfig-compat';
 import home from 'homedir-polyfill';
+import { installSync } from 'install-optional';
 
 // @ts-ignore
 import swc from 'ts-swc-rollup-plugin';
@@ -15,6 +16,9 @@ const DATA_DIR = path.join(__dirname, '..', 'data');
 const input = path.join(DATA_DIR, 'src', 'index.ts');
 
 describe('plugin', () => {
+  before(() => {
+    installSync('rollup', `${process.platform}-${process.arch}`);
+  });
   it('no overrides', async () => {
     const rollup = _require('rollup').rollup;
     const bundle = await rollup({
